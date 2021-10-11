@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizZard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+        integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main class="mainbox">
+        <div id="endscreen">
+            <h2 id="correctanswer"></h2>
+            <h2 id="incorrectanswer"></h2>
+            <h2 id="score"></h2>
+            <button class="btn btn-grad" onclick="playagain()">Play Again</button>
+        </div>
+
+        <div id="startscreen">
+            <h1><i class="fas fa-hat-wizard" id="onehat"></i>QuizZard<i class="fas fa-hat-wizard" id="twohat"></i></h1>
+            <div class="container">
+
+                <div>
+                    <label for="no-of-question">Questions</label>
+                    <select name="no-of-ques" id="no-of-question">
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                        <option value="40">40</option>
+                        <option value="50">50</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="level">Level</label>
+                    <select name="Level" id="level">
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="catogary">Category</label>
+                    <select name="catogory" id="category">
+                        <option value="9">General Knowledge</option>
+                        <option value="17">Science & Nature</option>
+                        <option value="18">Science & Computer</option>
+                        <option value="20">Mythology</option>
+                        <option value="21">Sports</option>
+                        <option value="23">History</option>
+                        <option value="25">Art</option>
+                        <option value="30">Science & Gadgets</option>
+                    </select>
+                </div>
+            </div>
+            <button class="btn btn-grad" onclick="startgame()">Play Game</button>
+        </div>
+        <div class="question">
+            <div id="loader">Loading Game<i class="fas fa-spinner fa-pulse"></i></div>
+        </div>
+        <div class="answers">
+        </div>
+    </main>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>

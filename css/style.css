@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  overflow: hidden;
+}
+
+.mainbox {
+  height: 100vh;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(
+    to right,
+    #000428 0%,
+    #004e92 51%,
+    #000428 100%
+  );
+  overflow: hidden;
+}
+
+.question {
+  width: 80%;
+  padding: 2rem;
+  font-size: 4rem;
+  display: grid;
+  place-items: center;
+  letter-spacing: 1.5px;
+  text-align: center;
+  color: white;
+  display: none;
+}
+
+.btn-grad {
+  background-image: linear-gradient(
+    to right,
+    #000428 0%,
+    #004e92 51%,
+    #000428 100%
+  );
+}
+.btn-grad {
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 1rem;
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn {
+  width: 40rem;
+  margin: 3rem;
+  padding: 2rem 0rem;
+  border: none;
+  outline: none;
+  font-size: 3.2rem;
+}
+
+.answers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  display: none;
+}
+
+.cbtn {
+  background-image: linear-gradient(
+    to right,
+    #5aff00 0%,
+    #5eff02 51%,
+    #5fe714 100%
+  );
+}
+
+.icbtn {
+  background-image: linear-gradient(
+    to right,
+    #f00000 0%,
+    #dc281e 51%,
+    #f00000 100%
+  );
+}
+
+#endscreen {
+  font-size: 2rem;
+  text-align: center;
+  height: 30rem;
+  color: white;
+  display: none;
+}
+
+#score {
+  font-size: 4rem;
+}
+#endscreen h2 {
+  padding: 1rem 0rem;
+}
+
+.fa-star,
+.fas {
+  color: yellow;
+}
+
+#startscreen {
+  font-size: 4rem;
+  text-align: center;
+  color: white;
+  height: 45rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#loader {
+  color: white;
+  font-size: 8rem;
+  display: flex;
+  flex-direction: column;
+  height: 40rem;
+  justify-content: space-around;
+}
+
+.fa-hat-wizard {
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+#startscreen h1 {
+  font-family: "Redressed", cursive;
+  letter-spacing: 5px;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+#startscreen #category {
+  width: 20rem;
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#startscreen #level,
+#no-of-question {
+  width: 10rem;
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#startscreen label {
+  font-size: 2.5rem;
+  display: block;
+  text-align: center;
+}
+
+#startscreen option,
+select {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #004e92;
+  color: white;
+  border: none;
+  outline: none;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 50rem;
+  align-items: center;
+}
+
+@media (max-width: 550px) {
+  html {
+    font-size: 50%;
+  }
+  #startscreen {
+    font-size: 3rem;
+  }
+  #startscreen #category {
+    width: 13rem;
+  }
+  .btn {
+    width: 30rem;
+    padding:1.2rem 0rem;
+    font-size: 2.5rem;
+  }
+  .question {
+    font-size: 3rem;
+    padding: 0;
+  }
+  #loader{
+    font-size: 4rem;
+  }
+  .fa-spinner{
+    font-size: 8rem;
+  }
+}
+
+@media (max-width: 350px) {
+  html {
+    font-size: 40%;
+  }
+}
+
+#onehat {
+  animation: levitate 2s infinite alternate-reverse;
+}
+#twohat {
+  animation: levitate 2s infinite alternate-reverse;
+}
+
+@keyframes levitate {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes rightkey {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(30px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes wrongkey {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(30px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
